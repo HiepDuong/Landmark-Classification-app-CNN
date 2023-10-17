@@ -13114,12 +13114,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">shutil</span>
-
-<span class="c1"># Create a zip archive</span>
-<span class="n">shutil</span><span class="o">.</span><span class="n">make_archive</span><span class="p">(</span><span class="s2">&quot;checkpoints&quot;</span><span class="p">,</span> <span class="s1">&#39;zip&#39;</span><span class="p">,</span> <span class="s2">&quot;checkpoints&quot;</span><span class="p">)</span>
-
-<span class="c1"># Then you can download the &#39;checkpoints.zip&#39; using the platform&#39;s file browser.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ipywidgets</span>
 </pre></div>
 
     </div>
@@ -13132,15 +13127,58 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[1]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;/workspace/home/checkpoints.zip&#39;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: ipywidgets in /root/.local/lib/python3.7/site-packages (7.6.5)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /opt/conda/lib/python3.7/site-packages (from ipywidgets) (5.1.4)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /opt/conda/lib/python3.7/site-packages (from ipywidgets) (0.2.0)
+Requirement already satisfied: nbformat&gt;=4.2.0 in /opt/conda/lib/python3.7/site-packages (from ipywidgets) (5.0.4)
+Requirement already satisfied: ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34; in /opt/conda/lib/python3.7/site-packages (from ipywidgets) (7.13.0)
+Requirement already satisfied: widgetsnbextension~=3.5.0 in /root/.local/lib/python3.7/site-packages (from ipywidgets) (3.5.2)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0; python_version &gt;= &#34;3.6&#34; in /root/.local/lib/python3.7/site-packages (from ipywidgets) (3.0.9)
+Requirement already satisfied: traitlets&gt;=4.3.1 in /opt/conda/lib/python3.7/site-packages (from ipywidgets) (4.3.3)
+Requirement already satisfied: tornado&gt;=4.2 in /opt/conda/lib/python3.7/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets) (5.1.1)
+Requirement already satisfied: jupyter-client in /opt/conda/lib/python3.7/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets) (6.0.0)
+Requirement already satisfied: jupyter-core in /opt/conda/lib/python3.7/site-packages (from nbformat&gt;=4.2.0-&gt;ipywidgets) (4.6.3)
+Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /opt/conda/lib/python3.7/site-packages (from nbformat&gt;=4.2.0-&gt;ipywidgets) (3.2.0)
+Requirement already satisfied: setuptools&gt;=18.5 in /opt/conda/lib/python3.7/site-packages (from ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (45.2.0.post20200209)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.7/site-packages (from ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (0.7.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /opt/conda/lib/python3.7/site-packages (from ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (3.0.3)
+Requirement already satisfied: pexpect; sys_platform != &#34;win32&#34; in /opt/conda/lib/python3.7/site-packages (from ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (4.8.0)
+Requirement already satisfied: jedi&gt;=0.10 in /opt/conda/lib/python3.7/site-packages (from ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (0.16.0)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.7/site-packages (from ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (2.5.2)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.7/site-packages (from ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (0.1.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.7/site-packages (from ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (4.4.2)
+Requirement already satisfied: notebook&gt;=4.4.1 in /opt/conda/lib/python3.7/site-packages (from widgetsnbextension~=3.5.0-&gt;ipywidgets) (5.7.4)
+Requirement already satisfied: six in /opt/conda/lib/python3.7/site-packages (from traitlets&gt;=4.3.1-&gt;ipywidgets) (1.16.0)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /opt/conda/lib/python3.7/site-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets) (2.8.1)
+Requirement already satisfied: pyzmq&gt;=13 in /opt/conda/lib/python3.7/site-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets) (19.0.0)
+Requirement already satisfied: importlib-metadata; python_version &lt; &#34;3.8&#34; in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.2.0-&gt;ipywidgets) (1.5.0)
+Requirement already satisfied: attrs&gt;=17.4.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.2.0-&gt;ipywidgets) (19.3.0)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/conda/lib/python3.7/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.2.0-&gt;ipywidgets) (0.15.7)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.7/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (0.1.8)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /opt/conda/lib/python3.7/site-packages (from pexpect; sys_platform != &#34;win32&#34;-&gt;ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (0.6.0)
+Requirement already satisfied: parso&gt;=0.5.2 in /opt/conda/lib/python3.7/site-packages (from jedi&gt;=0.10-&gt;ipython&gt;=4.0.0; python_version &gt;= &#34;3.3&#34;-&gt;ipywidgets) (0.6.1)
+Requirement already satisfied: terminado&gt;=0.8.1 in /opt/conda/lib/python3.7/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (0.8.3)
+Requirement already satisfied: nbconvert in /opt/conda/lib/python3.7/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (5.6.1)
+Requirement already satisfied: Send2Trash in /opt/conda/lib/python3.7/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (1.5.0)
+Requirement already satisfied: jinja2 in /opt/conda/lib/python3.7/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (2.11.1)
+Requirement already satisfied: prometheus-client in /opt/conda/lib/python3.7/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (0.7.1)
+Requirement already satisfied: zipp&gt;=0.5 in /opt/conda/lib/python3.7/site-packages (from importlib-metadata; python_version &lt; &#34;3.8&#34;-&gt;jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.2.0-&gt;ipywidgets) (3.0.0)
+Requirement already satisfied: defusedxml in /opt/conda/lib/python3.7/site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (0.6.0)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (1.4.2)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /opt/conda/lib/python3.7/site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (0.3)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /opt/conda/lib/python3.7/site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (0.8.4)
+Requirement already satisfied: bleach in /opt/conda/lib/python3.7/site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (3.1.1)
+Requirement already satisfied: testpath in /opt/conda/lib/python3.7/site-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (0.4.4)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /opt/conda/lib/python3.7/site-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (1.1.1)
+Requirement already satisfied: webencodings in /opt/conda/lib/python3.7/site-packages (from bleach-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets) (0.5.1)
+Note: you may need to restart the kernel to use updated packages.
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -13150,6 +13188,38 @@ div#notebook {
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbextension <span class="nb">enable</span> --py widgetsnbextension
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enabling notebook extension jupyter-js-widgets/extension...
+      - Validating: <span class="ansi-green-fg">OK</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">VBox</span><span class="p">,</span> <span class="n">Button</span><span class="p">,</span> <span class="n">FileUpload</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">Label</span>
@@ -13243,13 +13313,13 @@ div#notebook {
 
  
  
-<div id="3b775d36-3f60-48b2-b0bc-ec762a580750"></div>
+<div id="3d924c57-8f42-4670-ade5-5e9169c94024"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#3b775d36-3f60-48b2-b0bc-ec762a580750');
+var element = $('#3d924c57-8f42-4670-ade5-5e9169c94024');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "7bbd3474153e4e8faa03778eae2e9b7d", "version_major": 2, "version_minor": 0}
+{"model_id": "ccd04ddae3234a968500ca80f6057703", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -13285,7 +13355,7 @@ var element = $('#3b775d36-3f60-48b2-b0bc-ec762a580750');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>python src/create_submit_pkg.py
@@ -13305,35 +13375,120 @@ var element = $('#3b775d36-3f60-48b2-b0bc-ec762a580750');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>executing: jupyter nbconvert --to html cnn_from_scratch.ipynb
-[NbConvertApp] Converting notebook cnn_from_scratch.ipynb to html
-[NbConvertApp] Writing 1109487 bytes to cnn_from_scratch.html
-executing: jupyter nbconvert --to html transfer_learning.ipynb
+<pre>executing: jupyter nbconvert --to html transfer_learning.ipynb
 [NbConvertApp] Converting notebook transfer_learning.ipynb to html
-[NbConvertApp] Writing 409333 bytes to transfer_learning.html
+[NbConvertApp] Writing 405299 bytes to transfer_learning.html
 executing: jupyter nbconvert --to html app.ipynb
 [NbConvertApp] Converting notebook app.ipynb to html
-[NbConvertApp] Writing 295058 bytes to app.html
-Adding files to submission_2023-10-16T15h38m.tar.gz
-src/data.py
-src/optimization.py
-src/transfer.py
-src/create_submit_pkg.py
-src/__init__.py
-src/model.py
-src/helpers.py
-src/predictor.py
-src/train.py
-cnn_from_scratch.ipynb
-transfer_learning.ipynb
-app.ipynb
-cnn_from_scratch.html
-transfer_learning.html
-app.html
-
-----------------------------------------------------------------
-Done. Please submit the file submission_2023-10-16T15h38m.tar.gz
-----------------------------------------------------------------
+^C
+Traceback (most recent call last):
+  File &#34;/opt/conda/bin/jupyter-nbconvert&#34;, line 11, in &lt;module&gt;
+    sys.exit(main())
+  File &#34;/opt/conda/lib/python3.7/site-packages/jupyter_core/application.py&#34;, line 270, in launch_instance
+    return super(JupyterApp, cls).launch_instance(argv=argv, **kwargs)
+  File &#34;/opt/conda/lib/python3.7/site-packages/traitlets/config/application.py&#34;, line 664, in launch_instance
+    app.start()
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/nbconvertapp.py&#34;, line 340, in start
+    self.convert_notebooks()
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/nbconvertapp.py&#34;, line 510, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/nbconvertapp.py&#34;, line 481, in convert_single_notebook
+    output, resources = self.export_single_notebook(notebook_filename, resources, input_buffer=input_buffer)
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/nbconvertapp.py&#34;, line 410, in export_single_notebook
+    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/exporter.py&#34;, line 179, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/exporter.py&#34;, line 197, in from_file
+    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/html.py&#34;, line 95, in from_notebook_node
+    return super(HTMLExporter, self).from_notebook_node(nb, resources, **kw)
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py&#34;, line 322, in from_notebook_node
+    output = self.template.render(nb=nb_copy, resources=resources)
+  File &#34;/opt/conda/lib/python3.7/site-packages/jinja2/environment.py&#34;, line 1088, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/html/full.tpl&#34;, line 22, in root
+    var mimeElement = document.querySelector(&#39;script[type=&#34;application/vnd.jupyter.widget-view+json&#34;]&#39;);
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/html/basic.tpl&#34;, line 22, in root
+    {% endblock output_group %}
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/skeleton/display_priority.tpl&#34;, line 15, in root
+    {%- block data_png -%}
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/skeleton/null.tpl&#34;, line 12, in root
+    If one of the block you do overwrite is not a leave block, consider
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/html/full.tpl&#34;, line 88, in block_body
+    
+  File &#34;/opt/conda/lib/python3.7/site-packages/jinja2/runtime.py&#34;, line 290, in call
+    return __obj(*args, **kwargs)
+  File &#34;/opt/conda/lib/python3.7/site-packages/jinja2/runtime.py&#34;, line 372, in __call__
+    rv = concat(self._stack[self._depth](self._context))
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/skeleton/null.tpl&#34;, line 31, in block_body
+    {%- block codecell scoped -%}
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/skeleton/null.tpl&#34;, line 46, in block_any_cell
+    {%- for output in cell.outputs -%}
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/html/basic.tpl&#34;, line 36, in block_codecell
+    &lt;/div&gt;
+  File &#34;/opt/conda/lib/python3.7/site-packages/jinja2/runtime.py&#34;, line 290, in call
+    return __obj(*args, **kwargs)
+  File &#34;/opt/conda/lib/python3.7/site-packages/jinja2/runtime.py&#34;, line 372, in __call__
+    rv = concat(self._stack[self._depth](self._context))
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/skeleton/null.tpl&#34;, line 73, in block_codecell
+    {%- endfor -%}
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/html/basic.tpl&#34;, line 47, in block_input_group
+    &lt;div class=&#34;inner_cell&#34;&gt;
+  File &#34;/opt/conda/lib/python3.7/site-packages/jinja2/runtime.py&#34;, line 290, in call
+    return __obj(*args, **kwargs)
+  File &#34;/opt/conda/lib/python3.7/site-packages/jinja2/runtime.py&#34;, line 372, in __call__
+    rv = concat(self._stack[self._depth](self._context))
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/skeleton/null.tpl&#34;, line 88, in block_input_group
+    {%- endif -%}
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/exporters/../templates/html/basic.tpl&#34;, line 106, in block_input
+    &lt;/pre&gt;
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/filters/highlight.py&#34;, line 57, in __call__
+    language, metadata)
+  File &#34;/opt/conda/lib/python3.7/site-packages/nbconvert/filters/highlight.py&#34;, line 141, in _pygments_highlight
+    lexer = IPython3Lexer()
+  File &#34;/opt/conda/lib/python3.7/site-packages/pygments/lexer.py&#34;, line 580, in __call__
+    cls._tokens = cls.process_tokendef(&#39;&#39;, cls.get_tokendefs())
+  File &#34;/opt/conda/lib/python3.7/site-packages/pygments/lexer.py&#34;, line 519, in process_tokendef
+    cls._process_state(tokendefs, processed, state)
+  File &#34;/opt/conda/lib/python3.7/site-packages/pygments/lexer.py&#34;, line 483, in _process_state
+    str(tdef)))
+  File &#34;/opt/conda/lib/python3.7/site-packages/pygments/lexer.py&#34;, line 498, in _process_state
+    rex = cls._process_regex(tdef[0], rflags, state)
+  File &#34;/opt/conda/lib/python3.7/site-packages/pygments/lexer.py&#34;, line 427, in _process_regex
+    return re.compile(regex, rflags).match
+  File &#34;/opt/conda/lib/python3.7/re.py&#34;, line 234, in compile
+    return _compile(pattern, flags)
+  File &#34;/opt/conda/lib/python3.7/re.py&#34;, line 286, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File &#34;/opt/conda/lib/python3.7/sre_compile.py&#34;, line 764, in compile
+    p = sre_parse.parse(p, flags)
+  File &#34;/opt/conda/lib/python3.7/sre_parse.py&#34;, line 924, in parse
+    p = _parse_sub(source, pattern, flags &amp; SRE_FLAG_VERBOSE, 0)
+  File &#34;/opt/conda/lib/python3.7/sre_parse.py&#34;, line 420, in _parse_sub
+    not nested and not items))
+  File &#34;/opt/conda/lib/python3.7/sre_parse.py&#34;, line 544, in _parse
+    if sourcematch(&#34;-&#34;):
+  File &#34;/opt/conda/lib/python3.7/sre_parse.py&#34;, line 251, in match
+    self.__next()
+  File &#34;/opt/conda/lib/python3.7/sre_parse.py&#34;, line 233, in __next
+    def __next(self):
+KeyboardInterrupt
+Traceback (most recent call last):
+  File &#34;src/create_submit_pkg.py&#34;, line 40, in &lt;module&gt;
+    create_submit_pkg()
+  File &#34;src/create_submit_pkg.py&#34;, line 20, in create_submit_pkg
+    subprocess.check_call(cmd_line, shell=True)
+  File &#34;/opt/conda/lib/python3.7/subprocess.py&#34;, line 358, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File &#34;/opt/conda/lib/python3.7/subprocess.py&#34;, line 341, in call
+    return p.wait(timeout=timeout)
+  File &#34;/opt/conda/lib/python3.7/subprocess.py&#34;, line 1019, in wait
+    return self._wait(timeout=timeout)
+  File &#34;/opt/conda/lib/python3.7/subprocess.py&#34;, line 1653, in _wait
+    (pid, sts) = self._try_wait(0)
+  File &#34;/opt/conda/lib/python3.7/subprocess.py&#34;, line 1611, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
 </pre>
 </div>
 </div>

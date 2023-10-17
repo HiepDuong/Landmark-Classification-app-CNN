@@ -13131,18 +13131,6 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Defaulting to user installation because normal site-packages is not writeable
-Collecting torchvision==0.12.0
-  Using cached torchvision-0.12.0-cp37-cp37m-manylinux1_x86_64.whl (21.0 MB)
-Collecting tqdm==4.63.0
-  Using cached tqdm-4.63.0-py2.py3-none-any.whl (76 kB)
-Collecting pandas==1.3.5
-  Using cached pandas-1.3.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.3 MB)
-Collecting seaborn==0.11.2
-  Using cached seaborn-0.11.2-py3-none-any.whl (292 kB)
-Installing collected packages: torchvision, tqdm, pandas, seaborn
-<span class="ansi-yellow-fg">  WARNING: The script tqdm is installed in &#39;/root/.local/bin&#39; which is not on PATH.
-  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</span>
-Successfully installed pandas-1.3.5 seaborn-0.11.2 torchvision-0.12.0 tqdm-4.63.0
 </pre>
 </div>
 </div>
@@ -13225,48 +13213,9 @@ cachedir: .pytest_cache
 rootdir: /workspace/home
 collected 1 item                                                               <span class="ansi-bold">
 
-src/transfer.py::test_get_model_transfer_learning </span><span class="ansi-red-intense-fg ansi-bold">FAILED</span><span class="ansi-red-fg">                 [100%]</span>
+src/transfer.py::test_get_model_transfer_learning </span><span class="ansi-green-intense-fg ansi-bold">PASSED</span><span class="ansi-green-fg">                 [100%]</span>
 
-=================================== FAILURES ===================================
-<span class="ansi-red-intense-fg ansi-bold">_______________________ test_get_model_transfer_learning _______________________</span>
-
-data_loaders = {&#39;test&#39;: &lt;torch.utils.data.dataloader.DataLoader object at 0x7fba66d76910&gt;, &#39;train&#39;: &lt;torch.utils.data.dataloader.DataLoader object at 0x7fba66d76490&gt;, &#39;valid&#39;: &lt;torch.utils.data.dataloader.DataLoader object at 0x7fba693aa0d0&gt;}
-
-    <span class="ansi-blue-intense-fg">def</span> <span class="ansi-green-intense-fg">test_get_model_transfer_learning</span>(data_loaders):
-    
-        model = get_model_transfer_learning(n_classes=<span class="ansi-blue-intense-fg">23</span>)
-    
-        dataiter = <span class="ansi-cyan-intense-fg">iter</span>(data_loaders[<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">train</span><span class="ansi-yellow-fg">&#34;</span>])
-        images, labels = dataiter.next()
-    
-        out = model(images)
-    
-        <span class="ansi-blue-intense-fg">assert</span> <span class="ansi-cyan-intense-fg">isinstance</span>(
-            out, torch.Tensor
-        ), <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">The output of the .forward method should be a Tensor of size ([batch_size], [n_classes])</span><span class="ansi-yellow-fg">&#34;</span>
-    
-&gt;       <span class="ansi-blue-intense-fg">assert</span> out.shape == torch.Size(
-            [<span class="ansi-blue-intense-fg">2</span>, <span class="ansi-blue-intense-fg">23</span>]
-        ), <span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">Expected an output tensor of size (2, 23), got </span><span class="ansi-yellow-fg">{out.shape}</span><span class="ansi-yellow-fg">&#34;</span>
-<span class="ansi-red-intense-fg ansi-bold">E       AssertionError: Expected an output tensor of size (2, 23), got torch.Size([2, 50])</span>
-<span class="ansi-red-intense-fg ansi-bold">E       assert torch.Size([2, 50]) == torch.Size([2, 23])</span>
-<span class="ansi-red-intense-fg ansi-bold">E         At index 1 diff: 50 != 23</span>
-<span class="ansi-red-intense-fg ansi-bold">E         Full diff:</span>
-<span class="ansi-red-intense-fg ansi-bold">E         - torch.Size([2, 23])</span>
-<span class="ansi-red-intense-fg ansi-bold">E         ?                ^^</span>
-<span class="ansi-red-intense-fg ansi-bold">E         + torch.Size([2, 50])</span>
-<span class="ansi-red-intense-fg ansi-bold">E         ?                ^^</span>
-
-<span class="ansi-red-intense-fg ansi-bold">src/transfer.py</span>:71: AssertionError
----------------------------- Captured stdout setup -----------------------------
-Reusing cached mean and std
-Dataset mean: tensor([0.4638, 0.4725, 0.4687]), std: tensor([0.2699, 0.2706, 0.3018])
------------------------------ Captured stderr call -----------------------------
-Downloading: &#34;https://download.pytorch.org/models/resnet18-f37072fd.pth&#34; to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
-100%|██████████| 44.7M/44.7M [00:00&lt;00:00, 168MB/s] 
-=========================== short test summary info ============================
-FAILED src/transfer.py::test_get_model_transfer_learning - AssertionError: Ex...
-<span class="ansi-red-fg">============================== </span><span class="ansi-red-intense-fg ansi-bold">1 failed</span><span class="ansi-red-fg"> in 10.92s</span><span class="ansi-red-fg"> ==============================</span>
+<span class="ansi-green-fg">============================== </span><span class="ansi-green-intense-fg ansi-bold">1 passed</span><span class="ansi-green-fg"> in 13.20s</span><span class="ansi-green-fg"> ==============================</span>
 </pre>
 </div>
 </div>
